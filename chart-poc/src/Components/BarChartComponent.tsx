@@ -29,7 +29,7 @@ const ageData = [
 
 const BarChartComponent = () => {
   return (
-    <div style={{ width: "100%", height: 300, gridColumn: "1/3" }}>
+    <div style={{ width: "100%", height: 300}}>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={ageData} barGap={200} barSize={53}>
           <CartesianGrid strokeDasharray="0 0" vertical={false} strokeOpacity={0.3} />

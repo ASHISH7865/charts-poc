@@ -16,8 +16,8 @@ function GeoChartComponent() {
   const [selectedCountry, setSelectedCountry] = useState<any>(null);
 
   // Fixed width and height for the map
-  const width = 1200; // Set your desired width
-  const height = 800; // Set your desired height
+  const width = 600; // Set your desired width
+  const height = 300; // Set your desired height
 
   useEffect(() => {
     const svg = select(svgRef.current);
@@ -43,7 +43,7 @@ function GeoChartComponent() {
         if (userData[countryName as keyof typeof userData]) {
           return "#A85CF9"; 
         } else {
-          return "#E2D8FF"; 
+          return "#D9D9D9"; 
         }
       });
 
@@ -63,7 +63,7 @@ function GeoChartComponent() {
   }, [selectedCountry]);
 
   return (
-    <div style={{ marginBottom: "2rem" ,  gridColumn: "1/3"}}>
+    <div style={{ marginBottom: "2rem"}}>
       <svg ref={svgRef} width={width} height={height}></svg>
     </div>
   );
